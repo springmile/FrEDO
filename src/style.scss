@@ -1,0 +1,51 @@
+// set some default constants
+@import "partials/base";
+
+// html 5 boilerplate top section
+@import "common/boilerplate";
+
+// generic elements
+@import "common/typography";
+@import "common/forms";
+
+// grid layout
+@import "partials/960-grid";
+
+$ninesixty-columns: 16;
+
+.container {
+  @include grid-container;
+  #header,
+  #footer,
+  #main,
+  #sidebar {
+    @include grid-unit-base;
+  }
+  #header,
+  #footer {
+    @include grid-width(16);
+  }
+  #sidebar {
+    @include grid-width(4);
+    @include grid-pull(12);
+  }
+  #main {
+    @include grid-width(12);
+    @include grid-push(4);
+  }
+}
+
+// site specific styles
+//@import "site/site";
+@import "site/navs";
+
+// html 5 boilerplate bottom section
+@import "common/helpers";
+@import "common/media";
+@import "common/print";
+
+
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
+
+// dev default command:
+// sass --watch -t expanded src/style.scss:css/style.css

@@ -1,0 +1,32 @@
+<!--#include file="fhtml/shell/head.fhtml" -->
+
+<body data-controller="" data-action="">
+<form action="#" method="post">
+
+<!--#include file="fhtml/shell/skip-to.fhtml" -->
+
+<!--#include file="fhtml/shell/header.fhtml" -->
+  
+  <!-- container -->
+  <div class="container">
+    <div id="main">
+      <h1></h1>
+      <!-- content editable -->
+      <!-- /content editable -->              
+    </div>
+    
+    <div id="sidebar">
+
+    </div>
+  </div>
+  <!-- /container -->
+  
+<!--#include file="fhtml/shell/footer.fhtml" -->
+
+<!--#include file="fhtml/shell/support.fhtml" -->
+
+<!--#include file="fhtml/shell/js.fhtml" -->
+
+</form>
+</body>
+</html>

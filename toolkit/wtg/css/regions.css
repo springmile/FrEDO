@@ -1,0 +1,205 @@
+/*!
+ * Layout:       regions.css
+ * Project:      Project name
+ * Version:      1.0
+ * Last change:  29/04/09
+ * Assigned to:  Diego Lago (dl)
+ * Primary use:  Website
+ *
+ *
+ * The main layout consists of two basic blocks:
+ * #outer-container is the main container for site content, branding, navigation, search, etc
+ * #footer is used for site information that "sticks" to the bottom regardless viewport height
+ *
+ * The class "wide" is used throughout full width horizontal areas or regions of the layout
+ *
+ * The default number of columns is three, the order of the columns in the markup is
+ * middle, left and right
+ * middle is used for main copy, left for sub navigation and right for site highlights
+ *
+ * The template also supports two columns by overriding margins in #outer-content (main column)
+ * and adding body classes
+ *
+ * Some regions are positioned absolute as their order in the markup does not match the visual order
+ * This is because of accessibility best prectices and to improve SEO
+ *
+ * The template supports both, fixed and flexible widths
+ * height units are preferred in ems for scalability
+ * 
+ *
+ * For production merge all styles sheets to a single one and optimise it
+ */
+
+html, body, #outer-container {
+  height: 100%;
+  text-align: center;
+}
+body > #outer-container {
+  height: auto;
+  min-height: 100%;
+}
+#container {
+  padding-bottom: 4em; /* must be same height as the footer */
+}
+#outer-footer {
+  clear: both;
+  height: 4em;
+  margin-top: -4em; /* negative value of footer height */
+  position: relative;
+}
+.wide {
+  margin: 0 auto;
+  max-width: 960px;
+  min-width: 760px;
+  padding: 0;
+  position: relative;
+  text-align: left;
+  width: 100%; /* for fixed width set max-width = min-width = width */
+}
+
+/**
+ * Columns DEFAULT
+ * 3 Columns: left + middle + right
+ */
+#main {
+  float: left;
+  margin: 12em -19em 0 0;
+  width: 100%;
+}
+#outer-content {
+  float: right;
+  margin-left: -19.2em;
+  width: 100%;
+}
+#content {
+  margin: 0 17.5em;
+  position: relative;
+  padding: 1em;
+}
+#sub-navigation {
+  position: relative;
+  width: 17.5em;
+}
+#highlights {
+  float: right;
+  margin-top: 12em;
+  width: 17.5em;
+}
+
+/**
+ * Columns OVERRIDE
+ * 2 columns: middle + right
+ */
+body.sidebar-right #content {
+  margin-left: 0;
+}
+
+/**
+ * Columns OVERRIDE
+ * 2 columns: left + middle
+ */
+body.sidebar-left #content {
+  margin-right: 0;
+}
+
+/**
+ * Columns OVERRIDE
+ * 1 column: middle
+ */
+body.no-sidebar #content {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/**
+ * Absolute Positioning
+ */
+#outer-branding {
+  position: relative;
+  top: 3em;
+  width: 100%;
+}
+#branding {
+  height: 12em;
+}
+#outer-tools {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+#tools {
+  height: 3em;
+}
+#navigation {
+  height: 3em;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1; /* needed for dropdown menu */
+}
+#breadcrumb {
+  height: 3em;
+  left: 0;
+  position: absolute;
+  top: 3em;
+  width: 100%;
+}
+#support-navigation {
+  height: 3em;
+  right: 0;
+  position: absolute;
+  top: -9em;
+  width: 17.5em;
+}
+#promo {
+  height: 6em;
+  left: 0;
+  position: absolute;
+  top: 6em;
+  width: 100%;
+}
+#search {
+  height: 3em;
+  position: absolute;
+  right: 0;
+  top: -3em;
+  width: 17.5em;
+}
+
+/**
+ * Grid
+ */
+.col {
+  float: left;
+  position: relative;
+  display: inline;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+.col-half {
+  width: 49%;
+}
+.col-third {
+  width: 32%;
+}
+.col-quarter {
+  width: 23.50%;
+}
+
+/**
+ * Clearing Classes
+ */
+.clear {
+  clear: both;
+}
+.clearfix:before,
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; } /* IE < 8 */

@@ -1,0 +1,110 @@
+/*!
+ * Layout:       modules.css
+ * Project:      Project name
+ * Version:      1.0
+ * Last change:  09/08/10
+ * Assigned to:  Diego Lago (dl)
+ * Primary use:  Website
+ *
+ * 
+ * MODULES are areas of functionality or content that are placed
+ * inside REGIONS
+ *
+ * As a minimum, MODULES are made of a header and main sections
+ * More complex MODULES extend by adding a footer and sidebar
+ *
+ * Every ELEMENT should be placed inside a MODULE
+ * Whether the need is for a navigational menu, a login box or a piece of content
+ * always use a MODULE as the building block
+ * 
+ * For accessibility, each region MODULE starts with a heading (h2)
+ * which, depending on visual designs, might be hidden or not
+ *
+ * If required, MODULES can also be nested
+ *
+ * MODULES are also clasified by their functionality on the page:
+ * form, nav, listing, widget, teaser
+ * these are classes added to the MODULES
+ *
+ * For production merge all styles sheets to a single one and optimise it
+ */
+ 
+/* module default */
+.mod {
+  margin-bottom: 2em;
+  width: 100%;
+}
+.mod-footer {
+  clear: both;
+}
+.mod-footer,
+.mod-side-main,
+.mod-side-head {
+  position: relative; /* some layouts require CSS positioning */
+}
+
+/* head and main on the right */
+.mod-head-main-right .mod-head,
+.mod-head-main-right .mod-main {
+  float: right;
+  width: 70%;
+}
+.mod-head-main-right .mod-side {
+  float: left;
+  width: 30%;
+  margin-top: -3em;
+}
+
+/* head on top, main on the right */
+.mod-main-right .mod-main {
+  float: right;
+  width: 70%;
+}
+.mod-main-right .mod-side {
+  float: left;
+  width: 30%;
+  overflow: hidden;
+}
+
+/* head and main on the left */
+.mod-head-main-left .mod-head,
+.mod-head-main-left .mod-main {
+  float: left;
+  width: 70%;
+}
+.mod-head-main-left .mod-side {
+  float: right;
+  width: 30%;
+  margin-top: -3em;
+}
+
+/* head on top, main on the left */
+.mod-main-left .mod-main {
+  float: left;
+  width: 70%;
+}
+.mod-main-left .mod-side {
+  float: right;
+  width: 30%;
+  overflow: hidden;
+}
+
+/* side before main */
+.mod-side-main .mod-main {
+  margin-top: 12.8em;
+}
+.mod-side-main .mod-side {
+  position: absolute;
+  top: 3em;
+  width: 100%;
+}
+
+/* side before head */
+.mod-side-head .mod-head {
+  margin-top: 12.8em;
+}
+.mod-side-head .mod-side {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

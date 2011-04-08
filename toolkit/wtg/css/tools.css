@@ -1,0 +1,124 @@
+/*!
+ * Typography:   tools.css
+ * Project:      Project name
+ * Version:      1.0
+ * Last change:  09/08/10
+ * Assigned to:  Diego Lago (dl)
+ * Primary use:  Website
+ */
+
+/**
+ * Toolbar
+ */
+#access-tools {
+  float: right;
+  width: 36em;
+}
+/* Headings */
+#tools h3,
+#tools ul,
+#tools li {
+  line-height: 3em;
+  height: 3em;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+#tools h3 {
+  font-size: 1em;
+  font-weight: normal;
+  display: inline;
+  margin: 0 .5em 0 1.5em;
+}
+
+/* Lists */
+#tools ul {
+  list-style: none;
+}
+#tools li {
+  cursor: pointer;
+}
+
+/* Options General */
+#font-size li, #contrast li {
+  float: left;
+  margin: 0 .3em 0 0;
+  position: relative;
+  top: .7em;
+  text-align: center;
+}
+#font-size li a, #contrast li a {
+  color: #505050;
+  border: 1px solid #505050;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  display: block;
+  text-decoration: none;
+}
+#font-size li a:hover, #contrast li a:hover {
+  text-decoration: none;
+}
+#tools li a em {
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: block;
+  cursor: pointer;
+  z-index: 100;
+}
+#tools li a span {
+  display: block;
+  width: 5em;
+  padding: .2em .5em;
+  position: absolute;
+  background: #fff;
+  color: #000;
+  border: 1px solid #505050;
+  top: 75%;
+  margin-left: 1.3em;
+  text-align: center;
+  text-decoration: none;
+  z-index: 2;
+}
+
+/* Font Size Options */
+#font-size li a {
+  background: #fff;
+}
+#font-size li #font-medium em { 
+  font-size: 1.25em;
+  width: 1.2em;
+  height: 1.2em;
+  line-height: 1.2em;
+}
+#font-size li #font-large em { 
+  font-size: 1.6em;
+  width: .9em;
+  height: .9em;
+  line-height: .9em;
+  position: relative;
+  top: 1px;
+}
+
+/* Contrast Options */
+#contrast li #contrast-reg {
+  color: #000;
+  background: #fff;
+}
+#contrast li #contrast-blue {
+  color: #000079;
+  background-color: #CFE5FC;
+}
+#contrast li #contrast-soft {
+  color: #0E0E6E;
+  background-color: #F7F3D6;
+}
+#contrast li #contrast-hi {
+  color: #ff0;
+  background: #000; 
+}
+#tools li a:active img,
+#tools li a:focus img {
+  border: 1px solid #D977FF;
+}

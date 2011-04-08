@@ -1,0 +1,258 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Modules</title>
+  <!-- Meta data -->
+  <meta name="MSSmartTagsPreventParsing" content="true" />
+  <meta name="copyright" content="Company Name" />
+  <meta name="author" content="Company Name" />
+  <meta name="robots" content="index, follow" />
+  <meta name="distribution" content="global" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="title" content="" />
+  <meta name="language" content="uk" />
+  <meta name="rating" content="General" />
+  <meta http-equiv="content-language" content="en" />
+  <meta name="DC.language" scheme="ISO639-2" content="eng" />
+  <meta name="DC.coverage" content="UK; United Kingdom" />
+  <meta name="DC.creator" content="Company Name" />
+  <meta name="DC.publisher" content="Company Name" />
+  <meta name="DC.rights.copyright" content="Company Name" />
+  <meta name="DC.subject" scheme="eGMS.IPSV" content="Company Name1"/>
+
+  <!-- Stylesheets -->
+  <link type="text/css" rel="stylesheet" href="../css/reset.css" media="all" />
+  <link type="text/css" rel="stylesheet" href="../css/elements.css" media="all" />
+  <link type="text/css" rel="stylesheet" href="../css/modules.css" media="all" />
+  <link type="text/css" rel="stylesheet" href="../css/nav.css" media="all" />
+  <!--[if lte IE 7]>
+  <link type="text/css" rel="stylesheet" href="../css/ie7.css" media="all" />
+  <![endif]-->
+  <!--[if IE 6]>
+  <link type="text/css" rel="stylesheet" href="../css/ie6.css" media="all" />
+  <![endif]--> 
+  <style type="text/css">
+    body {
+      text-align: center;
+    }
+    #container {
+      margin: 0 auto;
+      width: 500px;
+      text-align: left;
+    }
+    .mod { border: 1px solid #999; }
+    .mod-head { background: #ccc; }
+    .mod-main { background: #ddd; }
+    .mod-side { background: #888; }
+    .mod-footer { background: #ccc; }
+    .mod h2, .mod h3, .mod p { margin-bottom: 0; }
+    .nav ul { background: #ddd; }
+    .nested {
+      z-index: 3;
+      border-left: 0;
+      border-right: 0;
+    }
+  </style>
+</head>
+<body>
+<div id="container">
+
+  <h1>Modules</h1>
+  <p>On default view, side area (image) and footer are optional.</p>
+  
+  <!-- Default -->
+  <div class="mod">
+    <div class="mod-head">
+      <h2>Default module</h2>
+    </div>
+    <div class="mod-main">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="mod-side">
+      <img src="../img/th.gif" width="150" height="150" alt="" />
+    </div>
+    <div class="mod-footer">
+      <p><a href="">Footer link</a></p>
+    </div>
+  </div>
+  
+  <!-- Head and Main on the right -->
+  <div class="mod mod-head-main-right">
+    <div class="mod-head">
+      <h2>Head and Main on the right</h2>
+    </div>
+    <div class="mod-main">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="mod-side">
+      <img src="../img/th.gif" width="150" height="150" alt="" />
+    </div>
+    <div class="mod-footer">
+      <p><a href="">Footer link</a></p>
+    </div>
+  </div>
+  
+  <!-- Head on top, Main on the right -->
+  <div class="mod mod-main-right">
+    <div class="mod-head">
+      <h2>Head on top, Main on the right</h2>
+    </div>
+    <div class="mod-main">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="mod-side">
+      <img src="../img/th.gif" width="150" height="150" alt="" />
+    </div>
+    <div class="mod-footer">
+      <p><a href="">Footer link</a></p>
+    </div>
+  </div>
+  
+  <!-- Head and Main on the left -->
+  <div class="mod mod-head-main-left">
+    <div class="mod-head">
+      <h2>Head and Main on the left</h2>
+    </div>
+    <div class="mod-main">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="mod-side">
+      <img src="../img/th.gif" width="150" height="150" alt="" />
+    </div>
+    <div class="mod-footer">
+      <p><a href="">Footer link</a></p>
+    </div>
+  </div>
+  
+  <!-- Head on top, Main on the left -->
+  <div class="mod mod-main-left">
+    <div class="mod-head">
+      <h2>Head on top, Main on the left</h2>
+    </div>
+    <div class="mod-main">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="mod-side">
+      <img src="../img/th.gif" width="150" height="150" alt="" />
+    </div>
+    <div class="mod-footer">
+      <p><a href="">Footer link</a></p>
+    </div>
+  </div>
+  
+  <!-- Side before Main -->
+  <div class="mod mod-side-main">
+    <div class="mod-head">
+      <h2>Side before Main</h2>
+    </div>
+    <div class="mod-main">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="mod-side">
+      <img src="../img/th.gif" width="150" height="150" alt="" />
+    </div>
+    <div class="mod-footer">
+      <p><a href="">Footer link</a></p>
+    </div>
+  </div>
+  
+  <!-- Side before Head -->
+  <div class="mod mod-side-head">
+    <div class="mod-head">
+      <h2>Side before Head</h2>
+    </div>
+    <div class="mod-main">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="mod-side">
+      <img src="../img/th.gif" width="150" height="150" alt="" />
+    </div>
+    <div class="mod-footer">
+      <p><a href="">Footer link</a></p>
+    </div>
+  </div>
+  
+  <div class="clear"></div>
+  
+  <!-- Nested -->
+  <div class="mod super">
+    <div class="mod-head">
+      <h2>Nested modules</h2>
+    </div>
+    <div class="mod-main">
+      <!-- Head on the right -->
+      <div class="mod mod-head-main-right nested">
+        <div class="mod-head">
+          <h2>Nested module</h2>
+        </div>
+        <div class="mod-main">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="mod-side">
+          <img src="../img/th.gif" width="150" height="150" alt="" />
+        </div>
+        <div class="mod-footer">
+          <p><a href="">Footer link</a></p>
+        </div>
+      </div>
+      <!-- Head on the right -->
+      <div class="mod mod-head-main-right nested">
+        <div class="mod-head">
+          <h2>Nested module</h2>
+        </div>
+        <div class="mod-main">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="mod-side">
+          <img src="../img/th.gif" width="150" height="150" alt="" />
+        </div>
+        <div class="mod-footer">
+          <p><a href="">Footer link</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="mod-footer">
+      <p><a href="">Footer link</a></p>
+    </div>
+  </div>
+  
+  <h2>Navigation modules</h2>
+  <p>See resources for a complete navigation listing</p>
+  
+  <!-- Vertical navigation - Default -->
+  <div class="mod">
+    <div class="mod-head hide">
+      <h2>Navigation - Vertical</h2>
+    </div>
+    <div class="mod-main">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a class="active" href="#">Census questionnaire</a></li>
+        <li><a href="#">What you need to do</a></li>
+        <li><a href="#">Extra help</a></li>
+        <li class="last"><a href="#">Completing the questionnaire</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Horizontal navigation -->
+  <div class="mod">
+    <div class="mod-head hide">
+      <h2>Navigation - Horizontal</h2>
+    </div>
+    <div class="mod-main">
+      <ul class="list-inline nav">
+        <li><a href="#">Home</a></li>
+        <li><a class="active" href="#">Census questionnaire</a></li>
+        <li><a href="#">What you need to do</a></li>
+        <li><a href="#">Extra help</a></li>
+        <li class="last"><a href="#">Completing the questionnaire</a></li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

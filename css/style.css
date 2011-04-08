@@ -1,0 +1,981 @@
+/**
+ * HTML5 ✰ Boilerplate
+ *
+ * style.css contains a reset, font normalization and some base styles.
+ *
+ * Credit is left where credit is due.
+ * Much inspiration was taken from these projects:
+ * - yui.yahooapis.com/2.8.1/build/base/base.css
+ * - camendesign.com/design/
+ * - praegnanz.de/weblog/htmlcssjs-kickstart
+ */
+/**
+ * html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+ * v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
+ * html5doctor.com/html-5-reset-stylesheet/
+ */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+/**
+ * Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/
+ */
+body {
+  font: 13px/1.231 sans-serif;
+  *font-size: small;
+}
+
+/* Hack retained to preserve specificity */
+select, input, textarea, button {
+  font: 99% sans-serif;
+}
+
+/* Normalize monospace sizing:
+   en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif;
+}
+
+/**
+ * Minimal base styles.
+ */
+/* Always force a scrollbar in non-IE */
+html {
+  overflow-y: scroll;
+}
+
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active {
+  outline: none;
+}
+
+ul, ol {
+  margin-left: 2em;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+/* Remove margins for navigation lists */
+nav ul, nav li {
+  margin: 0;
+  list-style: none;
+  list-style-image: none;
+}
+
+small {
+  font-size: 85%;
+}
+
+strong, th {
+  font-weight: bold;
+}
+
+td {
+  vertical-align: top;
+}
+
+/* Set sub, sup without affecting line-height: gist.github.com/413930 */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+pre {
+  /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 15px;
+}
+
+textarea {
+  overflow: auto;
+}
+
+/* www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/ */
+.ie6 legend, .ie7 legend {
+  margin-left: -7px;
+}
+
+/* Align checkboxes, radios, text inputs with their label by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+
+.ie6 input {
+  vertical-align: text-bottom;
+}
+
+/* Hand cursor on clickable input elements */
+label, input[type="button"], input[type="submit"], input[type="image"], button {
+  cursor: pointer;
+}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {
+  margin: 0;
+}
+
+/* Colors for form validity */
+input:invalid, textarea:invalid {
+  border-radius: 1px;
+  -moz-box-shadow: 0px 0px 5px red;
+  -webkit-box-shadow: 0px 0px 5px red;
+  box-shadow: 0px 0px 5px red;
+}
+
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid {
+  background-color: #f0dddd;
+}
+
+/* These selection declarations have to be separate
+   No text-shadow: twitter.com/miketaylr/status/12228805301
+   Also: hot pink! */
+::-moz-selection {
+  background: #ff5e99;
+  color: white;
+  text-shadow: none;
+}
+
+::selection {
+  background: #ff5e99;
+  color: white;
+  text-shadow: none;
+}
+
+/* j.mp/webkit-tap-highlight-color */
+a:link {
+  -webkit-tap-highlight-color: #ff5e99;
+}
+
+/* Make buttons play nice in IE:
+   www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+button {
+  width: auto;
+  overflow: visible;
+}
+
+/* Bicubic resizing for non-native sized IMG:
+   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/*
+ * Typography:   typography.scss
+ * Project:      Project name
+ * Version:      2.0
+ * Last change:  19/05/09
+ * Assigned to:  Diego Lago (dl)
+ * Primary use:  Website
+ */
+/**
+ * Typography
+ */
+body, select, input, textarea {
+  /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */
+  color: #444444;
+  /* Set your base font here, to apply evenly */
+  font-family: Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1;
+  margin-bottom: .5em;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: .75em;
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 1em;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 1.2em;
+  line-height: 1.25;
+  margin-bottom: 1.25em;
+}
+
+h5 {
+  font-size: 1em;
+  margin-bottom: 1.5em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+p, ul, ol, dl {
+  margin-bottom: 1.5em;
+}
+
+p img.left {
+  float: left;
+  margin: 1.5em 1.5em 1.5em 0;
+  padding: 0;
+}
+
+p img.right {
+  float: right;
+  margin: 1.5em 0 1.5em 1.5em;
+  padding: 0;
+}
+
+a, a:link, a:visited {
+  color: #224477;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #224477;
+  text-decoration: none;
+}
+
+blockquote {
+  margin: 1.5em;
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+/* Tables  */
+table {
+  margin-bottom: 1.4em;
+  width: 100%;
+}
+
+th {
+  font-weight: bold;
+  background: #e6e6e6;
+  border-top: 1px solid #dbdbdb;
+}
+
+th, td {
+  padding: .25em .5em;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+tfoot {
+  font-style: italic;
+}
+
+tr.even td {
+  background: #eeeeee;
+}
+
+/*
+ * Forms:        forms.scss
+ * Project:      Project name
+ * Version:      2.0
+ * Last change:  01/04/11
+ * Assigned to:  Diego Lago (dl)
+ * Primary use:  Website
+ */
+/**
+ * Forms
+ * .form can be applied to both, form and div elements. 
+ * This is because of .NET which treats the whole page as 
+ * a form hence we can't depend entirely on this element for CSS
+ */
+.form ul {
+  list-style: none;
+  margin: 0;
+}
+
+.form li {
+  padding: 5px 10px 10px;
+}
+
+input.text,
+input.file,
+select,
+textarea {
+  display: block;
+}
+
+input.text,
+select,
+textarea,
+fieldset {
+  border: 1px solid #a5acb2;
+}
+
+fieldset {
+  padding: 0 7px 5px;
+}
+
+.form li fieldset li {
+  padding: 0;
+  margin: 7px 0;
+}
+
+.form span.required {
+  font-size: 90%;
+  color: #700;
+}
+
+/* OVERRIDE: Inline Forms
+ * The class .fields-inline can be both applied
+ * to a whole list or a particulat list item
+ */
+.fields-inline li {
+  padding: 10px;
+}
+
+.fields-inline label {
+  float: left;
+  width: 20%;
+}
+
+.fields-block label {
+  float: none;
+  width: 100%;
+}
+
+.form .fields-inline fieldset li {
+  margin-right: 20px;
+}
+
+.form .fields-inline fieldset li label {
+  float: none;
+  width: auto;
+}
+
+/* error handling */
+.form li.error {
+  background: #fbe3e4;
+  color: #700;
+  margin-bottom: 2px;
+}
+
+.form li.error input,
+.form li.error select,
+.form li.error textarea,
+.form li.error fieldset {
+  border: 1px solid #700;
+}
+
+.form li.error input.checkbox,
+.form li.error input.radio {
+  border: 0;
+}
+
+.form label strong.error {
+  padding-left: 10px;
+}
+
+.form .fields-inline label strong.error {
+  padding-left: 0;
+  display: block;
+}
+
+/* general messages */
+.fail,
+.notice,
+.success {
+  padding: .7em;
+  margin-bottom: 1.4em;
+  border: 1px solid #ddd;
+}
+
+.fail {
+  background: #fbe3e4;
+  border-color: #fbc2c4;
+  color: #700;
+}
+
+.notice {
+  background: #fff6bf;
+  border-color: #ffd324;
+  color: #632;
+}
+
+.success {
+  background: #e6efc2;
+  border-color: #c6d880;
+  color: #342;
+}
+
+.fail a,
+.fail a:visited {
+  color: #700;
+}
+
+.notice a,
+.notice a:visited {
+  color: #632;
+}
+
+.success a,
+.success a:visited {
+  color: #342;
+}
+
+/* 960 Grid System - http://960.gs/
+ *
+ * Licensed under GPL and MIT.
+ */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+}
+.container #header,
+.container #footer,
+.container #main,
+.container #sidebar {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.container #header,
+.container #footer {
+  width: 940px;
+}
+.container #sidebar {
+  width: 220px;
+  position: relative;
+  left: -720px;
+}
+.container #main {
+  width: 700px;
+  position: relative;
+  left: 240px;
+}
+
+/*
+ * Site styles:  navs.scss
+ * Project:      Project name
+ * Version:      2.0
+ * Last change:  06/04/11
+ * Assigned to:  Diego Lago (dl)
+ * Primary use:  Website
+ */
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1;
+  float: left;
+  width: 100%;
+}
+
+li {
+  width: auto;
+  float: left;
+}
+li:hover {
+  visibility: inherit;
+  /* fixes IE7 'sticky bug' */
+  outline: 0;
+}
+
+a {
+  display: block;
+  position: relative;
+}
+a:focus, a:hover, a:active {
+  outline: 0;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1;
+  float: left;
+  width: 100%;
+}
+
+li {
+  width: auto;
+  float: left;
+}
+li:hover {
+  visibility: inherit;
+  /* fixes IE7 'sticky bug' */
+  outline: 0;
+}
+
+a {
+  display: block;
+  position: relative;
+}
+a:focus, a:hover, a:active {
+  outline: 0;
+}
+
+/* ie only */
+.ie7 .pagination ul,
+.ie6 .pagination ul {
+  display: inline;
+}
+
+#navigation ul, #navigation ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1;
+  float: left;
+  width: 100%;
+}
+#navigation li {
+  width: auto;
+  float: left;
+}
+#navigation li:hover {
+  visibility: inherit;
+  /* fixes IE7 'sticky bug' */
+  outline: 0;
+}
+#navigation a {
+  display: block;
+  position: relative;
+}
+#navigation a:focus, #navigation a:hover, #navigation a:active {
+  outline: 0;
+}
+#navigation ul {
+  background-color: #194c85;
+}
+#navigation li {
+  background-color: #194c85;
+}
+#navigation li:focus, #navigation li:hover, #navigation li:active {
+  background-color: #4885ca;
+  border-color: #4885ca;
+}
+#navigation a {
+  color: #fff;
+  border-color: #265a95;
+  padding: 8px 12px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-top-style: solid !important;
+  /* IE6 needs !important to avoid jump on click */
+  border-right-style: solid !important;
+  text-decoration: none;
+}
+#navigation a:visited {
+  color: #fff;
+}
+#navigation a:focus, #navigation a:hover, #navigation a:active {
+  background-color: #4885ca;
+  border-color: #4885ca;
+}
+
+#sub-navigation ul, #sub-navigation ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1;
+  float: left;
+  width: 100%;
+}
+#sub-navigation li {
+  width: 100%;
+  float: left;
+}
+#sub-navigation li:hover {
+  visibility: inherit;
+  /* fixes IE7 'sticky bug' */
+  outline: 0;
+}
+#sub-navigation a {
+  display: block;
+  position: relative;
+}
+#sub-navigation a:focus, #sub-navigation a:hover, #sub-navigation a:active {
+  outline: 0;
+}
+#sub-navigation ul {
+  background-color: #194c85;
+}
+#sub-navigation li {
+  background-color: #194c85;
+}
+#sub-navigation li:focus, #sub-navigation li:hover, #sub-navigation li:active {
+  background-color: #4885ca;
+  border-color: #4885ca;
+}
+#sub-navigation li ul {
+  background: #4885ca;
+}
+#sub-navigation li ul li, #sub-navigation li ul a {
+  background: #4885ca;
+}
+#sub-navigation li ul li:focus, #sub-navigation li ul li:hover, #sub-navigation li ul li:active, #sub-navigation li ul a:focus, #sub-navigation li ul a:hover, #sub-navigation li ul a:active {
+  background: #7eafe7;
+  border-color: #7eafe7;
+}
+#sub-navigation li ul a {
+  border-color: #74a5dc;
+}
+#sub-navigation a {
+  color: #fff;
+  border-color: #265a95;
+  padding: 8px 12px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-top-style: solid !important;
+  /* IE6 needs !important to avoid jump on click */
+  border-right-style: solid !important;
+  text-decoration: none;
+}
+#sub-navigation a:visited {
+  color: #fff;
+}
+#sub-navigation a:focus, #sub-navigation a:hover, #sub-navigation a:active {
+  background-color: #4885ca;
+  border-color: #4885ca;
+}
+
+#breadcrumb li {
+  background: transparent url(../img/ui/bg-sep-li.gif) no-repeat 100% 50%;
+  margin-right: 10px;
+  padding-right: 10px;
+}
+#breadcrumb li.last {
+  background: none;
+}
+#breadcrumb a {
+  text-decoration: none;
+}
+#breadcrumb a:visited {
+  text-decoration: none;
+}
+#breadcrumb a:hover {
+  text-decoration: underline;
+}
+#breadcrumb li {
+  background-image: url(../img/ui/bg-breadcrumb.gif);
+  padding-right: 18px;
+}
+
+.support-navigation li {
+  background: transparent url(../img/ui/bg-sep-li.gif) no-repeat 100% 50%;
+  margin-right: 10px;
+  padding-right: 10px;
+}
+.support-navigation li.last {
+  background: none;
+}
+.support-navigation a {
+  text-decoration: none;
+}
+.support-navigation a:visited {
+  text-decoration: none;
+}
+.support-navigation a:hover {
+  text-decoration: underline;
+}
+
+.pagination div {
+  width: 100%;
+  text-align: center;
+}
+.pagination ul {
+  margin: 0 auto;
+  width: auto;
+  display: inline-block;
+  float: none;
+}
+.pagination li {
+  margin-right: 4px;
+}
+.pagination li.last {
+  margin-right: 0;
+}
+.pagination li.active a,
+.pagination li.ellipsis a {
+  cursor: default;
+}
+.pagination li.active a {
+  font-weight: bold;
+}
+.pagination a {
+  display: inline;
+  padding: 3px 6px;
+  border-width: 1px;
+  border-style: solid;
+  text-decoration: none;
+  font-weight: normal;
+}
+.pagination a:visited {
+  text-decoration: none;
+}
+.pagination a {
+  border-color: #ddd;
+}
+.pagination a:hover {
+  background: #002F64;
+  color: #fff;
+}
+.pagination li.active a,
+.pagination li.ellipsis a {
+  border-color: #fff;
+}
+.pagination li.active a:hover,
+.pagination li.ellipsis a:hover {
+  background: #fff;
+  color: #224477;
+}
+
+/**
+ * Non-semantic helper classes: please define your styles before this section.
+ */
+/* For image replacement */
+.ir {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+}
+
+/* Hide for both screenreaders and browsers:
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+  visibility: hidden;
+}
+
+/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements.
+   j.mp/bestclearfix */
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+.clearfix {
+  zoom: 1;
+}
+
+/* used in nav and some forms */
+.list-inline li, .list-inline a {
+  float: left;
+}
+
+/**
+ * Media queries for responsive design.
+ *
+ * These follow after primary styles so they will successfully override.
+ */
+@media all and (orientation:portrait) {
+  /* Style adjustments for portrait mode goes here */
+}
+
+@media all and (orientation:landscape) {
+  /* Style adjustments for landscape mode goes here */
+}
+
+/* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
+   consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+@media screen and (max-device-width: 480px) {
+  /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
+  /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
+}
+
+/**
+ * Print styles.
+ *
+ * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+ */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  /* Black prints faster: sanbeiji.com/archives/953 */
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+  }
+
+  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}

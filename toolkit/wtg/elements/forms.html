@@ -1,0 +1,270 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Page Title</title>
+  <!-- Meta data -->
+  <meta name="MSSmartTagsPreventParsing" content="true">
+  <meta name="copyright" content="Company Name">
+  <meta name="author" content="Company Name">
+  <meta name="robots" content="index, follow">
+  <meta name="distribution" content="global">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="title" content="">
+  <meta name="language" content="uk">
+  <meta name="rating" content="General">
+  <meta http-equiv="content-language" content="en">
+  <meta name="DC.language" scheme="ISO639-2" content="eng">
+  <meta name="DC.coverage" content="UK; United Kingdom">
+  <meta name="DC.creator" content="Company Name">
+  <meta name="DC.publisher" content="Company Name">
+  <meta name="DC.rights.copyright" content="Company Name">
+  <meta name="DC.subject" scheme="eGMS.IPSV" content="Company Name1"/>
+
+  <!-- Stylesheets -->
+  <link type="text/css" rel="stylesheet" href="../css/reset.css" media="all">
+  <link type="text/css" rel="stylesheet" href="../css/elements.css" media="all">
+  <link type="text/css" rel="stylesheet" href="../css/regions.css" media="screen">
+  <link type="text/css" rel="stylesheet" href="../css/print.css" media="print">
+  <!--[if lte IE 7]>
+  <link type="text/css" rel="stylesheet" href="../css/ie7.css" media="all">
+  <![endif]-->
+  <!--[if IE 6]>
+  <link type="text/css" rel="stylesheet" href="../css/ie6.css" media="all">
+  <![endif]-->
+  <style type="text/css">
+    /* the styles in this section are not part of the framework */
+    body { margin-top: 1.5em; }
+    body.baseline { background: transparent url(../img/baseline.gif) repeat 0 0; }
+    .wide {
+      max-width: 400px;
+      min-width: 400px;
+      width: 100%;
+    }
+    #baseline { margin: 0; position: absolute; top: 10px; right: 0; }
+    #baseline li { display: inline; margin-right: 0.5em; }
+    #baseline li a { cursor: pointer; }
+    }
+  </style>
+</head>
+<body>
+<div class="wide">
+<!--   <ul id="baseline">
+    <li>Baseline</li>
+    <li><a>ON</a></li>
+    <li><a>OFF</a></li>
+  </ul> -->
+  <h1>Form elements</h1>
+  <h2>Labels as blocks</h2>
+  <form action="contact.php" method="post" id="contact-form" class="form">
+    <p>Fields with <span class="required">*</span> are required</p>
+    <ul>
+      <li>
+        <label for="name">Name <span class="required">*</span></label>
+        <input type="text" id="name" name="name" class="required text">
+      </li>
+      <li>
+        <label for="name">Company</label>
+        <input type="text" id="company" name="company" class="text">
+      </li>
+      <li>
+        <label for="email">E-mail <span class="required">*</span></label>
+        <input type="text" id="email" name="email" class="required email text">
+      </li>
+      <li>
+        <!--<span class="error">Local error message when needed goes here</span>-->
+        <label for="phone">Telephone <span class="required">*</span></label>
+        <input type="text" id="phone" name="phone" class="required number text">
+      </li>
+      <li>
+        <label for="interested">I'm interested in: <span class="required">*</span></label>
+        <select id="interested" name="interested" class="required">
+          <option value="" selected="selected" title="I'm interested in">Please select from below</option>
+          <option value="Professional Services Solutions">Professional Services Solutions</option>
+          <option value="Public Sector Soluctions">Public Sector Solutions</option>
+          <option value="Retail Solutions">Retail Solutions</option>
+          <option value="Bespoke Development">Bespoke Development</option>
+          <option value="Collaboration &amp; Web 2.0">Collaboration &amp; Web 2.0</option>
+          <option value="Hosting &amp; Application Management">Hosting &amp; Application Management</option>
+          <option value="Careers at WTG">Careers at WTG</option>
+          <option value="Press &amp; PR">Press &amp; PR</option>
+          <option value="Other">Other</option>
+        </select>
+      </li>
+      <li>
+        <label for="upload">Attach a file<span class="required">*</span></label>
+        <input type="file" id="upload" name="upload" class="required file">
+      </li>
+      <li>
+        <fieldset>
+          <legend>Gender <span class="required">*</span></legend>
+          <ul>
+            <li>
+              <input type="radio" id="gender-male" name="gender" value="m" class="required radio">
+              <label for="gender-male">Male</label>
+            </li>
+            <li>
+              <input type="radio" id="gender-female" name="gender" value="f" class="radio">
+              <label for="gender-female">Female</label>
+            </li>
+          </ul>
+        </fieldset>
+      </li>
+      <li>
+        <fieldset>
+          <legend>Contact preferences <span class="required">*</span></legend>
+          <ul>
+            <li>
+              <input type="checkbox" id="spam_email" name="spam" value="email" class="required checkbox">
+              <label for="spam_email">via E-Mail</label>
+            </li>
+            <li>
+              <input type="checkbox" id="spam_phone" name="spam" value="phone" class="checkbox">
+              <label for="spam_phone">via Phone</label>
+            </li>
+            <li>
+              <input type="checkbox" id="spam_mail" name="spam" value="mail" class="checkbox">
+              <label for="spam_mail">via Mail</label>
+            </li>
+          </ul>
+        </fieldset>
+      </li>  
+      <li>
+        <label for="body">Message <span class="required">*</span></label>
+        <textarea name="body" id="body" rows="12" cols="40" class="required"></textarea>
+      </li>
+      <li>
+        <input type="checkbox" id="agree" name="agree" class="required checkbox"><label for="agree">I agree to your policy <span class="required">*</span></label>
+      </li>  
+      <li><input type="submit" value="Send Message" class="submit"></li>
+    </ul>
+  </form>
+  
+  <h2>Labels inline</h2>
+  <form action="contact.php" method="post" id="contact-form2" class="form">
+    <p>Fields with <span class="required">*</span> are required</p>
+    <ul class="fields-inline">
+      <li>
+        <label for="name">Name <span class="required">*</span></label>
+        <input type="text" id="name" name="name" class="required text">
+      </li>
+      <li>
+        <label for="name">Company</label>
+        <input type="text" id="company" name="company" class="text">
+      </li>
+      <li>
+        <label for="email">E-mail <span class="required">*</span></label>
+        <input type="text" id="email" name="email" class="required email text">
+      </li>
+      <li>
+        <label for="phone">Telephone <span class="required">*</span></label>
+        <input type="text" id="phone" name="phone" class="required number text">
+      </li>
+      <li>
+        <label for="interested">I'm interested in: <span class="required">*</span></label>
+        <select id="interested" name="interested" class="required">
+          <option value="" selected="selected" title="I'm interested in">Please select from below</option>
+          <option value="Professional Services Solutions">Professional Services Solutions</option>
+          <option value="Public Sector Soluctions">Public Sector Solutions</option>
+          <option value="Retail Solutions">Retail Solutions</option>
+          <option value="Bespoke Development">Bespoke Development</option>
+          <option value="Collaboration &amp; Web 2.0">Collaboration &amp; Web 2.0</option>
+          <option value="Hosting &amp; Application Management">Hosting &amp; Application Management</option>
+          <option value="Careers at WTG">Careers at WTG</option>
+          <option value="Press &amp; PR">Press &amp; PR</option>
+          <option value="Other">Other</option>
+        </select>
+      </li>
+      <li>
+        <label for="upload">Attach a file<span class="required">*</span></label>
+        <input type="file" id="upload" name="upload" class="required file">
+      </li>
+      <li>
+        <fieldset>
+          <legend>Gender <span class="required">*</span></legend>
+          <ul class="list-inline">
+            <li>
+              <input type="radio" id="gender-male" name="gender" value="m" class="required radio">
+              <label for="gender-male">Male</label>
+            </li>
+            <li>
+              <input type="radio" id="gender-female" name="gender" value="f" class="radio">
+              <label for="gender-female">Female</label>
+            </li>
+          </ul>
+        </fieldset>
+      </li>
+      <li>
+        <fieldset>
+          <legend>Contact preferences <span class="required">*</span></legend>
+          <ul class="list-inline">
+            <li>
+              <input type="checkbox" id="spam_email" name="spam" value="email" class="required checkbox">
+              <label for="spam_email">via E-Mail</label>
+            </li>
+            <li>
+              <input type="checkbox" id="spam_phone" name="spam" value="phone" class="checkbox">
+              <label for="spam_phone">via Phone</label>
+            </li>
+            <li>
+              <input type="checkbox" id="spam_mail" name="spam" value="mail" class="checkbox">
+              <label for="spam_mail">via Mail</label>
+            </li>
+          </ul>
+        </fieldset>
+      </li>
+      <li>
+        <label for="body">Message <span class="required">*</span></label>
+        <textarea name="body" id="body" rows="12" cols="40" class="required"></textarea>
+      </li>
+      <li class="fields-inline-reset">
+        <input type="checkbox" id="agree" name="agree" class="required checkbox">
+        <label for="agree">I agree to your policy <span class="required">*</span></label>
+      </li>  
+      <li><input type="submit" value="Send Message" class="submit"></li>
+    </ul>
+  </form>
+
+</div>
+
+  <!-- JavaScript -->
+  <script type="text/javascript" src="../js/jquery-1.3.2.min.js"></script>
+  <noscript><p>Your browser does not support JavaScript</p></noscript>
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    //$('#baseline a:eq(0)').click(function () {
+    //  $("body").addClass("baseline");
+    //});
+    //$('#baseline a:eq(1)').click(function () {
+    //  $('body').removeClass('baseline');
+    //});
+
+    //$(document).ready(function() {
+    //  $(':input:not(:submit)').bind('focus', function() {
+    //    $(this).parents('li').addClass('focus')
+    //    .end(); // end focus and move on to blur
+    //    $(this).bind('blur', function() {
+    //      $(this).parents('li').removeClass('focus');
+    //    });
+    //  });
+    //  /* both events need consideration */
+    //  $(':input:not(:submit)').bind('change', function() {
+    //    $(this).parents('li').removeClass('error-wrap');
+    //  });
+    //  $(':input:not(:submit)').bind('keyup', function() {
+    //    $(this).parents('li').removeClass('error-wrap');
+    //  });
+    //});
+
+    //$.validator.setDefaults({
+    //  submitHandler: function() { alert('submitted!'); }
+    //});
+
+    //$(document).ready(function() {
+    //  $('#contact-form').validate();
+    //});
+   /* ]]> */
+  </script>
+</body>
+</html>

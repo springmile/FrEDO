@@ -1,0 +1,56 @@
+@include nav-menu(auto);
+
+@mixin nav-pagination {
+  div {
+    width: 100%;
+    text-align: center;
+  }
+   
+  ul {
+    margin: 0 auto;
+    width: auto;
+    display: inline-block;
+    float: none;
+  }
+  
+  li {
+    margin-right: 4px;
+  }
+  
+  li.last {
+    margin-right: 0;
+  }
+  
+  li.active,
+  li.ellipsis {
+    a {
+      cursor: default;
+    }
+  }
+  
+  li.active {
+    a {
+      font-weight: bold;
+    }
+  }
+  
+  a {
+    display: inline;
+    padding: 3px 6px;
+    border-width: 1px;
+    border-style: solid;
+    text-decoration: none;
+    font-weight: normal;
+    &:visited {
+      text-decoration: none; // ie6
+    }
+  }
+}
+
+/* ie only */
+.ie7 .pagination,
+.ie6 .pagination {
+  ul {
+    display: inline;
+  }
+}

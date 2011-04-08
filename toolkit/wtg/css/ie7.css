@@ -1,0 +1,39 @@
+/*!
+ * IE7:          ie7.css
+ * Project:      Project name
+ * Version:      1.0
+ * Last change:  16/11/09
+ * Assigned to:  Diego Lago (dl)
+ * Primary use:  Website
+ *
+ * Table of contents
+ *
+ * - Typography
+ * - Layout
+ */
+ 
+/**
+ * Typography
+ */
+html>body p code { *white-space: normal; }
+ol { margin-left: 2.3em; }
+a:active, a:focus { border: none; }
+
+/**
+ * Layout
+ */
+.container { 
+  zoom: 1;
+  display: block;
+}
+.col {
+  margin-left: 0;
+  margin-right: 1.5%;
+}
+
+/**
+ * Pagination
+ */
+.pagination .mod-main ul {
+  display: inline;
+}

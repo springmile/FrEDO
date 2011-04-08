@@ -1,0 +1,27 @@
+/*!
+ * IE6:          ie6.css
+ * Project:      Project name
+ * Version:      1.0
+ * Last change:  22/05/09
+ * Assigned to:  Diego Lago (dl)
+ * Primary use:  Website
+ *
+ * Table of contents
+ *
+ * - Typography
+ * - Layout
+ */
+ 
+/**
+ * Typography
+ */
+sup { vertical-align: text-top; }
+sub { vertical-align: text-bottom; }
+ 
+/**
+ * Layout
+ */
+.container {
+  /* try to solve IE6's lack of support for min and max-width */
+  width: expression(document.body.clientWidth < 762? "760px" : document.body.clientWidth > 962? "960px" : "100%");
+}

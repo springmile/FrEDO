@@ -1,0 +1,24 @@
+.nav-flyout ul li {
+  width: 24em;
+}
+.nav-flyout .mod {
+  width: auto;
+  border: 1px solid red;
+  margin: .75em 0 .75em 1em;
+  display: inline;
+}
+.nav-flyout .mod a {
+  display: inline;
+  position: static;
+  padding: 0;
+}
+.nav-flyout li li:hover, .nav-flyout li li.sfHover {
+  background: transparent;
+}
+
+/**
+ * Skin
+ */
+.nav-flyout .mod {
+  background: #4885ca !important;
+}

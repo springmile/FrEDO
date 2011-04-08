@@ -1,0 +1,106 @@
+/**
+ * Superfish Styles - extends nav with sub menues
+ */
+ 
+.nav-fisheye li {
+  float: left;
+  position: static; /* reset relative position from .nav-fisheye */
+}
+.nav-fisheye ul {
+  position: static;
+  width: auto; /* left offset of submenus need to match (see below) */
+  float: left;
+}
+.nav-fisheye ul li {
+  float: left;
+}
+.nav-fisheye ul ul {
+  position: absolute;
+  top: -999em;
+  left: 0;
+  width: 700px;
+  float: left;
+}
+.nav-fisheye ul ul li {
+  width: auto;
+}
+/* overwrite for horizontal navs */
+.list-inline ul li {
+  width: auto;
+}
+.list-inline ul ul {
+  width: 960px;
+}
+.nav-fisheye ul li:hover {
+  visibility: inherit; /* fixes IE7 'sticky bug' */
+}
+.nav-fisheye ul li:hover ul,
+.nav-fisheye ul li.sfHover ul {
+  top: 2.6em; /* match top ul list item height */
+  left: 0;
+  z-index: 99;
+}
+.nav-fisheye ul li:hover li ul,
+.nav-fisheye ul li.sfHover li ul,
+.nav-fisheye ul li li:hover ul,
+.nav-fisheye ul li li.sfHover ul {
+  top: 2.6em;
+  left: 0;
+}
+
+/* apply arrows down hovers to modern browsers */
+.nav-fisheye li ul li .sf-sub-indicator {
+  background-position: -10px -100px; /* 8-bit indexed alpha png. IE6 gets solid image only */
+}
+.nav-fisheye li ul li a > .sf-sub-indicator {
+  background-position: 0 -100px;
+}
+.nav-fisheye li ul a:focus > .sf-sub-indicator,
+.nav-fisheye li ul a:hover > .sf-sub-indicator,
+.nav-fisheye li ul a:active > .sf-sub-indicator,
+.nav-fisheye li ul li:hover > a > .sf-sub-indicator,
+.nav-fisheye li ul li.sfHover > a > .sf-sub-indicator {
+  background-position: -10px -100px; /* arrow hovers for modern browsers*/
+}
+
+/* arrows for tree-like section */
+.nav-fisheye .tree-link {
+  position: relative;
+  padding-right: 18px;
+}
+.nav-fisheye .tree-indicator {
+  position: absolute;
+  /*right: 49px;*/
+  display: block;
+  width: 16px;
+  top: 0;
+  background: #194C85 url('../img/ui/ico-arrow.png') no-repeat -8px 10px;
+  text-indent: -999px;
+  line-height: 2.5em;
+}
+.nav-fisheye a > .tree-indicator {
+  background-position: 3px 10px;
+}
+.nav-fisheye li.tree-item a.sf-with-ul {
+  padding-right: 18px !important;
+}
+.nav-fisheye li.tree-item li a.sf-with-ul {
+  padding-right: 2.25em !important;
+}
+.nav-fisheye li.tree-item .tree-link:hover span,
+.nav-fisheye li.sfHover .tree-link span {
+  right: 0;
+  background: url('../img/ui/ico-arrow.png') no-repeat -8px 10px;
+}
+.nav-fisheye li.tree-item a.sf-with-ul span.tree-indicator,
+.nav-fisheye li.tree-item a.sf-with-ul:hover span.tree-indicator {
+  right: 0;
+  background: url('../img/ui/ico-arrow.png') no-repeat -8px 10px;
+}
+
+/**
+ * Skin
+ */
+.nav-fisheye a {
+  background: #194c85;
+}

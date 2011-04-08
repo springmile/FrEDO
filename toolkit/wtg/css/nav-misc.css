@@ -1,0 +1,86 @@
+.nav, .nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/**
+ * Support navigation
+ */
+.support {
+  padding: 0 1em;
+}
+.support h2 {
+  font-size: 1em;
+  margin: 0;
+}
+.support li {
+  background: transparent url(../img/ui/bg-sep-li.gif) no-repeat 100% 50%;
+  margin-right: .75em;
+  padding-right: .75em;
+}
+.support li.last {
+  border: none;
+  background: none;
+}
+.support a {
+  text-decoration: none;
+  font-weight: bold;
+}
+.support a:hover {
+  text-decoration: underline;
+}
+
+/* breadcrumb extend */
+.breadcrumb li {
+  background: transparent url(../img/ui/bg-breadcrumb.gif) no-repeat 100% 50%;
+  padding-right: 1.2em;
+}
+
+/* page options extend */
+.page-options {
+  position: absolute;
+  top: 0;
+  padding: 0;
+}
+#content {
+  padding-top: 2.5em;
+}
+
+/**
+ * Pagination
+ */
+.pagination .mod-main {
+  width: 100%;
+  text-align: center;
+}
+.pagination .mod-main ul {
+  margin: 0 auto;
+  display: inline-block;
+}
+.pagination li.last {
+  border: none;
+}
+.pagination li.active,
+.pagination li.ellipsis,
+.pagination li a {
+  margin-right: .5em;
+  padding: .1em .5em;
+  display: inline;
+  border: 1px solid #fff;
+  background: #fff;
+  color: #002f64;
+  font-weight: bold;
+}
+.pagination li.ellipsis {
+  font-weight: normal;
+}
+.pagination .mod-main li a {
+  border: 1px solid #ddd;
+  text-decoration: none;
+  font-weight: normal;
+}
+.pagination li a:hover {
+  background: #002F64;
+  color: #fff;
+}

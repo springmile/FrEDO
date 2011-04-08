@@ -1,0 +1,141 @@
+/*
+ * Site styles:  navs.scss
+ * Project:      Project name
+ * Version:      2.0
+ * Last change:  06/04/11
+ * Assigned to:  Diego Lago (dl)
+ * Primary use:  Website
+ */
+ 
+@import "../partials/nav-menu";
+@import "../partials/nav-support";
+@import "../partials/nav-pagination";
+
+// horizontal nav
+#navigation {
+  @include nav-menu(auto);
+  ul {
+    background-color: #194c85;
+  }
+  li {
+    background-color: #194c85;
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: #4885ca;
+      border-color: #4885ca;
+    }
+  }
+  a {
+    color: #fff;
+    border-color: #265a95;
+    padding: 8px 12px;
+    border-top-width: 1px;
+    border-right-width: 1px; 
+    border-top-style: solid !important; /* IE6 needs !important to avoid jump on click */
+    border-right-style: solid !important;
+    text-decoration: none;
+    &:visited {
+      color: #fff;
+    }
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: #4885ca;
+      border-color: #4885ca;
+    }
+  }  
+}
+
+// vertical nav
+#sub-navigation {
+  @include nav-menu();
+  ul {
+    background-color: #194c85;
+  }
+  li {
+    background-color: #194c85;
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: #4885ca;
+      border-color: #4885ca;
+    }
+    ul {
+      background: #4885ca;
+      
+      li, a {
+        background: #4885ca;        
+        &:focus,
+        &:hover,
+        &:active {
+          background: #7eafe7;
+          border-color: #7eafe7;
+        }
+      }
+      
+      a {
+        border-color: #74a5dc;
+      }
+    }
+  }
+  a {
+    color: #fff;
+    border-color: #265a95;
+    padding: 8px 12px;
+    border-top-width: 1px;
+    border-right-width: 1px; 
+    border-top-style: solid !important; /* IE6 needs !important to avoid jump on click */
+    border-right-style: solid !important;
+    text-decoration: none;
+    &:visited {
+      color: #fff;
+    }
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: #4885ca;
+      border-color: #4885ca;
+    }
+  }
+}
+
+
+// breadcrumb nav
+#breadcrumb {
+  @include nav-support();
+  
+  li {
+    background-image: url(../img/ui/bg-breadcrumb.gif);
+    padding-right: 18px;
+  }
+  
+}
+
+// support nav
+.support-navigation {
+  @include nav-support();
+}
+
+// pagination
+.pagination {
+  @include nav-pagination();
+  
+  a {
+    border-color: #ddd;
+    &:hover {
+      background: #002F64;
+      color: #fff;
+    }
+  }
+  li.active,
+  li.ellipsis {
+    a {
+      border-color: #fff;
+      &:hover {
+        background: #fff;
+        color: $link-color;
+      }
+    }
+  }
+}

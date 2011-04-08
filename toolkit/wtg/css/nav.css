@@ -1,0 +1,74 @@
+/**
+ * Essential Styles
+ */
+.nav, .nav ul, .nav ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav {
+  line-height: 1;
+  float: left;
+  width: 100%;
+}
+.nav li {
+  width: 100%;
+  float: left;
+}
+.nav li:hover {
+  visibility: inherit; /* fixes IE7 'sticky bug' */
+}
+.nav a {
+  display: block;
+  position: relative;
+  padding: .75em 1em;
+}
+/* overwrite for horizontal navs */
+.list-inline li {
+  width: auto;
+}
+
+/**
+ * Skin
+ */
+.nav {
+  background: #194c85;
+}
+/* first level */
+.nav li {
+  background: #194c85;
+}
+.nav a {
+  border-top-width: 1px;
+  border-right-width: 1px; 
+  border-top-style: solid !important; /* IE6 needs !important to avoid jump on click */
+  border-right-style: solid !important;
+  border-color: #265a95 ;
+}
+.nav a, .nav a:visited { /* visited pseudo selector so IE6 applies text colour*/
+  color: #fff;
+  text-decoration: none;
+}
+.nav li:hover, .nav li.sfHover,
+.nav a:focus, .nav a:hover, .nav a:active {
+  background: #4885ca;
+  border-color: #4885ca;
+  outline: 0;
+}
+/* second and below */
+.nav ul {
+  background: #4885ca !important;
+}
+.nav li li,
+.nav li li a {
+  background: #4885ca;
+}
+.nav li li a {
+  border-color: #74a5dc;
+}
+.nav li li:hover, .nav li li.sfHover,
+.nav li li a:focus, .nav li li a:hover, .nav li li a:active {
+  background: #7eafe7;
+  border-color: #7eafe7;
+  outline: 0;
+}

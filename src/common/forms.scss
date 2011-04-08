@@ -1,0 +1,129 @@
+/*
+ * Forms:        forms.scss
+ * Project:      Project name
+ * Version:      2.0
+ * Last change:  01/04/11
+ * Assigned to:  Diego Lago (dl)
+ * Primary use:  Website
+ */
+
+
+/**
+ * Forms
+ * .form can be applied to both, form and div elements. 
+ * This is because of .NET which treats the whole page as 
+ * a form hence we can't depend entirely on this element for CSS
+ */
+.form ul { 
+  list-style: none;
+  margin: 0;
+}
+.form li {
+  padding: 5px 10px 10px;
+}
+input.text,
+input.file,
+select,
+textarea { 
+  display: block;
+}
+input.text,
+select,
+textarea,
+fieldset {
+  border: 1px solid #a5acb2;
+}
+fieldset { 
+  padding: 0 7px 5px;
+}
+.form li fieldset li { 
+  padding: 0;
+  margin: 7px 0;
+}
+.form span.required {
+  font-size: 90%;
+  color: #700;
+}
+
+/* OVERRIDE: Inline Forms
+ * The class .fields-inline can be both applied
+ * to a whole list or a particulat list item
+ */
+.fields-inline li {
+  padding: 10px;
+}
+.fields-inline label {
+  float: left;
+  width: 20%;
+}
+.fields-block label {
+  float: none;
+  width: 100%;
+}
+.form .fields-inline fieldset li {
+  margin-right: 20px;
+}
+.form .fields-inline fieldset li label {
+  float: none;
+  width: auto;
+}
+
+/* error handling */
+.form li.error {
+  background: #fbe3e4;
+  color: #700;
+  margin-bottom: 2px;
+}
+.form li.error input,
+.form li.error select,
+.form li.error textarea,
+.form li.error fieldset {
+  border: 1px solid #700;
+}
+.form li.error input.checkbox,
+.form li.error input.radio {
+  border: 0;
+}
+.form label strong.error {
+  padding-left: 10px;
+}
+.form .fields-inline label strong.error {
+  padding-left: 0;
+  display: block;
+}
+
+/* general messages */
+.fail, 
+.notice,
+.success {
+  padding: .7em;
+  margin-bottom: 1.4em;
+  border: 1px solid #ddd;
+}
+.fail {
+  background: #fbe3e4;
+  border-color: #fbc2c4;
+  color: #700;
+}
+.notice {
+  background: #fff6bf;
+  border-color: #ffd324;
+  color: #632;
+}
+.success {
+  background: #e6efc2;
+  border-color: #c6d880;
+  color: #342;
+}
+.fail a,
+.fail a:visited {
+  color: #700;
+}
+.notice a,
+.notice a:visited {
+  color: #632;
+}
+.success a,
+.success a:visited {
+  color: #342;
+}

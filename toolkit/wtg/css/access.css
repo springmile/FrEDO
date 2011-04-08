@@ -1,0 +1,87 @@
+/*!
+ * Typography:   access.css
+ * Project:      Project name
+ * Version:      1.0
+ * Last change:  25/08/09
+ * Assigned to:  Diego Lago (dl)
+ * Primary use:  Website
+ */
+
+/**
+ * Font size
+ */
+body.font-small { font-size: 75%; }
+body.font-small #tools h3, 
+body.font-small #tools li { float: left; }
+body.font-medium { font-size: 90%; }
+body.font-medium input, body.font-medium select { font-size: 105%; }
+body.font-medium #tools h3,
+body.font-medium #tools li { float: left; }
+body.font-large { font-size: 100%; }
+body.font-large input, body.font-large select { font-size: 115%; }
+body.font-large #tools h3,
+body.font-large #tools li { float: left; }
+
+/**
+ * Contrast
+ */
+/* contrast blue */
+body.contrast-blue {
+  color: #000079 !important;
+  background-color: #CFE5FC !important;
+}
+body.contrast-blue a {
+  color: #000079 !important;
+}
+
+/* contrast soft */
+body.contrast-soft {
+  color: #0E0E6E !important;
+  background-color: #F7F3D6 !important;
+}
+body.contrast-soft a {
+  color: #495700 !important;
+}
+
+/* contrast high */
+body.contrast-hi {
+  color: #ff0 !important;
+  background-color: #000 !important;
+}
+body.contrast-hi a {
+  color: #0ff !important;
+}
+
+/**
+ * The controls for the accessibility toolbar will behave differently 
+ * from the rest of the site. The styles below should be keep at the bottom of the style sheet
+ */
+/* font size section */
+body.contrast-reg #font-size a {
+  color: #000 !important;
+}
+body.contrast-blue #font-size a {
+  color: #000079 !important;
+  background-color: #CFE5FC !important;
+}
+body.contrast-soft #font-size a {
+  color: #0E0E6E !important;
+  background-color: #F7F3D6 !important;
+}
+body.contrast-hi #font-size a {
+  color: #ff0 !important;
+  background-color: #000 !important;
+}
+/* keep defaults in contrast section */
+a#contrast-reg {
+  color: #111 !important;
+}
+a#contrast-blue {
+  color: #000079 !important;
+}
+a#contrast-soft {
+  color: #0E0E6E !important;
+}
+a#contrast-hi {
+  color: #ff0 !important;
+}

@@ -1,0 +1,21 @@
+@include nav-menu(auto);
+
+@mixin nav-support() {
+  li {
+    background: transparent url(../img/ui/bg-sep-li.gif) no-repeat 100% 50%;
+    margin-right: 10px;
+    padding-right: 10px;
+  }
+  li.last {
+    background: none;
+  }
+  a {
+    text-decoration: none;
+    &:visited {
+      text-decoration: none;
+    }
+    &:hover {
+      text-decoration: underline;
+    } 
+  }
+}

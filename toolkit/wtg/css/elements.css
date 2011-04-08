@@ -1,0 +1,228 @@
+/*!
+ * Typography:   elements.css
+ * Project:      Project name
+ * Version:      1.0
+ * Last change:  19/05/09
+ * Assigned to:  Diego Lago (dl)
+ * Primary use:  Website
+ *
+ * Table of contents
+ * 
+ * - Main
+ * - Lists
+ * - Tables
+ * - Extras
+ * - Hidden Text
+ * - Forms
+ */
+
+/**
+ * Main
+ */
+body { font: 75%/1.5 Arial, sans-serif; color: #111; background: #fff; }
+h1, h2, h3, h4, h5, h6 { font-weight: bold }
+h1 { font-size: 3em; line-height: 1; margin-bottom: .5em; }
+h2 { font-size: 2em; margin-bottom: .75em; }
+h3 { font-size: 1.5em; line-height: 1; margin-bottom: 1em; font-weight: normal; }
+h4 { font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em; }
+h5 { font-size: 1em; margin-bottom: 1.5em; }
+h6 { font-size: 1em; }
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img { margin: 0; }
+p { margin: 0 0 1.5em; }
+p img { float: left; margin: 1.5em 1.5em 1.5em 0; padding:0; }
+p img.right { float: right; margin: 1.5em 0 1.5em 1.5em; }
+a, a:link, a:visited { color:#357; text-decoration: underline; }
+a:hover { color: #357; text-decoration: none; }
+a:active, a:focus { background: #def; color: #247; text-decoration: none; }
+blockquote { margin: 1.5em; color: #555; font-style: italic; }
+strong { font-weight: bold; }
+em, dfn { font-style: italic; }
+dfn { font-weight: bold; }
+sup, sub { line-height: 0; }
+abbr, acronym { border-bottom: 1px dotted #666; }
+address { margin: 0 0 1.5em; font-style: italic; }
+del { color:#555; }
+pre, code { margin: 1.5em 0; white-space: pre; }
+pre, code, tt { font: 1em 'andale mono', 'lucida console', monospace; line-height: 1.5; }
+code { background: #f5f5f5; display: block; }
+
+/**
+ * Lists
+ */
+li ul, li ol { margin: 0 1.5em; }
+ul, ol { margin: 0 1.5em 1.5em; }
+ul { list-style-type: square; }
+ol { list-style-type: decimal; }
+dl { margin: 0 0 1.5em 0; }
+dl dt { font-weight: bold; }
+dd { margin-left :1.5em; }
+
+/**
+ * Tables
+ */
+table { margin-bottom: 1.4em; width: 100%; }
+th { font-weight: bold; background: #e6e6e6; border-top: 1px solid #DBDBDB; }
+th, td { padding: .25em .5em; border-bottom: 1px solid #DBDBDB; }
+tfoot { font-style: italic; }
+caption { background: #f5f5f5; border-top: 1px solid #DBDBDB; }
+tr.even td { background: #eee; }
+
+/**
+ * Extras
+ */
+.small { font-size: .9em; line-height: 1.65; margin-bottom: 1.65em; }
+.large { font-size: 1.2em; margin-bottom: 1.25em; }
+.quiet { color: #555; }
+.loud { color: #000; }
+.bold { font-weight: bold; }
+.highlight { background: #ff0; color: #000; }
+.added { background: #060; color: #fff; }
+.removed { background: #900; color: #fff; }
+.first { margin-left: 0 !important; padding-left: 0 !important; }
+.last { margin-right: 0 !important; padding-right: 0 !important; }
+.top { margin-top: 0; padding-top: 0; }
+.bottom { margin-bottom: 0; padding-bottom: 0; }
+.block { display: block; }
+.inline { display: inline; }
+.list-inline li, .list-inline a { float: left; }
+.fail, .notice, .success { padding: .7em; margin-bottom: 1.4em; border: 1px solid #ddd; }
+.fail { background: #fbe3e4; border-color: #fbc2c4; }
+.notice { background: #fff6bf; border-color: #ffd324; }
+.success { background: #e6efc2; border-color: #c6d880; }
+.fail p, .notice p, .success p { margin: 0; }
+.fail a { color: #700; }
+.notice a { color: #632; }
+.success a { color: #342; }
+
+/**
+ * Hidden Text
+ */
+.hide {
+  position: absolute;
+  left: -99999px;
+  top: 0;
+  z-index: 20;
+  font-size: .1em;
+}
+.hide a:active,
+.hide a:focus {
+  position: absolute;
+  left: 99999px;
+  background: #ff0;
+}
+.skip a {
+  display: block;
+  width: 14em;
+  height: 3em;
+  line-height: 3em;
+  font-size: 2em;
+  text-decoration: none;
+}
+.none {
+  display: none;
+}
+
+/**
+ * Forms
+ * .form can be applied to both, form and div elements. 
+ * This is because of .NET which treats the whole page as 
+ * a form hence we can't depend entirely on this element for CSS
+ */
+.form { 
+  width: 100%;
+}
+.form ul { 
+  list-style: none;
+  margin: 0;
+}
+.form li {
+  margin: 0 0 0 -1em; /* same as padding left below but negative */
+  padding: .2em 1em 1em;
+}
+legend, label { 
+  font-weight: bold;
+  color: #444;
+  line-height: 1.8em; 
+  height: 1.8em;
+}
+label {
+  margin: 0;
+  display: inline;
+}
+fieldset { 
+  border: 1px solid #a5acb2;
+  padding: 0 .8em .8em;
+}
+.form fieldset li { 
+  padding-bottom: 0;
+}
+label span {
+  font-weight: normal;
+  display: block;
+  font-size: 90%;
+}
+legend span.required,
+label span.required,
+p span.required {
+  display: inline;
+  color: #700;
+}
+input.text,
+input.file,
+select,
+textarea { 
+  width: 99.4%;
+}
+/* OVERRIDE Forms */
+.fields-inline {
+  padding: 1em;
+}
+.fields-inline label {
+  float: left;
+  width: 28.4%;
+}
+.form .fields-inline fieldset li label,
+.form .fields-inline .fields-inline-reset label {
+  float: none;
+  width: auto;
+}
+.form .fields-inline {
+  padding-top: 1em;
+}
+.fields-inline input.text,
+.fields-inline input.file,
+.fields-inline select,
+.fields-inline textarea {
+  width: 70%;
+}
+input.radio,
+input.checkbox {
+  margin-left: 0; 
+  margin-right: 0.4em; 
+  position: relative;
+  top: .15em;
+}
+input.submit {
+  width: 10em;
+}
+textarea {
+  font: 1.1em Arial, sans-serif;
+}
+/* focus */
+.form li.focus {
+  background: #fcfcd7;
+}
+/* error */
+.form li.error-wrap {
+  background: #fbe3e4;
+}
+.form li .error {
+  color: #700;
+  line-height: 2em; 
+  height: 1.5em;
+  /*background: transparent url(../img/ico-error.png) no-repeat 0 50%;*/
+  line-height: 1.4em; 
+  height: 1.4em;
+  margin-top: .5em;
+  /*padding-left: 20px; */
+}

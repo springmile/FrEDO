@@ -1,0 +1,79 @@
+.nav-flyout ul {
+  width: 700px;
+  float: left;
+  top: 0 !important;
+}
+.nav-flyout li {
+  float: left;
+  position: static; /* reset relative position from .nav-dropdown */
+}
+.nav-flyout ul {
+  display: none;
+}
+.nav-flyout ul li {
+  width: 11em;
+}
+.nav-flyout li li a {
+  border: 0;
+}
+.nav-flyout li ul li ul {
+  width: auto;
+  left: 0;
+  position: relative; 
+  height: 1%; /* trigger haslayout on ie6 so this element shows */
+  height: 13em; /* for the time being because of ie6 & 7... */
+  padding-bottom: 1.5em;
+}
+.nav-flyout li:hover {
+  visibility: inherit; /* fixes IE7 'sticky bug' */
+}
+.nav-flyout li:hover ul,
+.nav-flyout li.sfHover ul {
+  top: 2.6em; /* match top ul list item height */
+  z-index: 99;
+}
+.nav-flyout li:hover li ul,
+.nav-flyout li.sfHover li ul,
+.nav-flyout li li:hover ul,
+.nav-flyout li li.sfHover ul {
+  top: 0;
+  left: 0;
+}
+.nav-flyout .clear {
+  clear: both !important;
+  visibility: visible;
+  height: 100%;
+}
+
+/* overwrite for horizontal navs */
+.list-inline ul {
+  width: 960px;
+  top: 2.6em !important;
+}
+.list-inline ul li ul {
+  top: 0 !important;
+}
+
+/**
+ * Skin
+ */
+.nav-flyout li:hover, .nav-flyout li.sfHover{
+  background: #4885ca;
+  border-color: #4885ca;
+  outline: 0;
+}
+
+/* apply arrows down hovers to modern browsers */
+.nav-flyout li ul li .sf-sub-indicator {
+  background-position: -10px -100px; /* 8-bit indexed alpha png. IE6 gets solid image only */
+}
+.nav-flyout li ul li a > .sf-sub-indicator {
+  background-position: 0 -100px;
+}
+.nav-flyout li ul a:focus > .sf-sub-indicator,
+.nav-flyout li ul a:hover > .sf-sub-indicator,
+.nav-flyout li ul a:active > .sf-sub-indicator,
+.nav-flyout li ul li:hover > a > .sf-sub-indicator,
+.nav-flyout li ul li.sfHover > a > .sf-sub-indicator {
+  background-position: -10px -100px; /* arrow hovers for modern browsers*/
+}

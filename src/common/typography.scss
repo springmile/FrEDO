@@ -1,0 +1,40 @@
+/*
+ * Typography:   typography.scss
+ * Project:      Project name
+ * Version:      2.0
+ * Last change:  19/05/09
+ * Assigned to:  Diego Lago (dl)
+ * Primary use:  Website
+ */
+
+/**
+ * Typography
+ */
+body, select, input, textarea {
+  /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */
+  color: $font-color;
+  /* Set your base font here, to apply evenly */
+  font-family: $base-font-family;
+}
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+h1 { font-size: 2.5em; line-height: 1; margin-bottom: .5em; }
+h2 { font-size: 2em; margin-bottom: .75em; }
+h3 { font-size: 1.5em; line-height: 1; margin-bottom: 1em; font-weight: normal; }
+h4 { font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em; }
+h5 { font-size: 1em; margin-bottom: 1.5em; }
+h6 { font-size: 1em; }
+p, ul, ol, dl { margin-bottom: 1.5em; }
+p img.left { float: left; margin: 1.5em 1.5em 1.5em 0; padding:0; }
+p img.right { float: right; margin: 1.5em 0 1.5em 1.5em; padding:0; }
+a, a:link, a:visited { color: $link-color; text-decoration: underline; }
+a:hover { color: $link-hover-color; text-decoration: none; }
+blockquote { margin: 1.5em; font-style: italic; }
+strong { font-weight: bold; }
+em { font-style: italic; }
+
+/* Tables  */
+table { margin-bottom: 1.4em; width: 100%; }
+th { font-weight: bold; background: $table-th-background-color; border-top: 1px solid $table-border-color; }
+th, td { padding: .25em .5em; border-bottom: 1px solid $table-border-color; }
+tfoot { font-style: italic; }
+tr.even td { background: $table-td-even-background-color; }

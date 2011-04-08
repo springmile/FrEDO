@@ -1,0 +1,31 @@
+$nav-menu-layout: 100%; // for vertical nav; for horizontal use "auto"
+
+@mixin nav-menu ($nav-menu-layout) {
+  ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1;
+    float: left;
+    width: 100%;
+  }
+  
+  li {
+    width: $nav-menu-layout;
+    float: left;    
+    &:hover {
+      visibility: inherit; /* fixes IE7 'sticky bug' */
+      outline: 0;
+    }
+  }
+  
+  a {
+    display: block;
+    position: relative;
+    &:focus,
+    &:hover,
+    &:active {
+      outline: 0;
+    }
+  }  
+}

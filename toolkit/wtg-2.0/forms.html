@@ -1,0 +1,323 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title></title>
+  
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+  <link rel="shortcut icon" href="favicon.ico">
+  <!--<link rel="apple-touch-icon" href="apple-touch-icon.png">-->
+  
+  <!-- CSS: implied media="all" -->
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <!-- Uncomment if you are specifically targeting less enabled mobile browsers
+  <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
+
+  <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+  <script src="js/libs/modernizr-1.7.min.js"></script>
+</head>
+
+<body data-controller="" data-action="">
+
+  <ul class="visuallyhidden">
+    <li><a href="#content">Skip to content</a></li>
+    <li><a href="#navigation">Skip to site navigation</a></li>
+    <li><a href="#support-navigation">Skip to search</a></li>
+    <li><a href="#tools">Skip to accessibility options</a></li>
+  </ul>
+
+  <!-- header -->
+  <div class="container">
+    <div id="header">
+      <a href="#" title=""><img src="img/ui/" alt="" title="" id="#" height="0" width="0"></a>
+    </div>
+  </div>
+  <!-- /header -->
+  
+  <!-- container -->
+  <div class="container">
+    <div id="main">
+<h1>Form elements</h1>
+      <h2>Labels as blocks</h2>
+      <form action="contact.php" method="post" id="contact-form" class="form">
+        <p>Fields with <span class="required">*</span> are required</p>
+        <ul>
+          <li>
+            <label for="name">Name <span class="required">*</span></label>
+            <input type="text" id="name" name="name" class="text required">
+          </li>
+          <li>
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" class="text">
+          </li>
+          <li>
+            <label for="email">E-mail <span class="required">*</span></label>
+            <input type="text" id="email" name="email" class="text required email">
+          </li>
+          <li>
+            <label for="phone">Telephone <span class="required">*</span></label>
+            <input type="text" id="phone" name="phone" class="text required number">
+          </li>
+          <li>
+            <label for="interested">I'm interested in: <span class="required">*</span></label>
+            <select id="interested" name="interested" class="required">
+              <option value="" selected="selected" title="I'm interested in">Please select from below</option>
+              <option value="Professional Services Solutions">Professional Services Solutions</option>
+              <option value="Public Sector Soluctions">Public Sector Solutions</option>
+              <option value="Retail Solutions">Retail Solutions</option>
+              <option value="Bespoke Development">Bespoke Development</option>
+              <option value="Collaboration &amp; Web 2.0">Collaboration &amp; Web 2.0</option>
+              <option value="Hosting &amp; Application Management">Hosting &amp; Application Management</option>
+              <option value="Careers at WTG">Careers at WTG</option>
+              <option value="Press &amp; PR">Press &amp; PR</option>
+              <option value="Other">Other</option>
+            </select>
+          </li>
+          <li>
+            <label for="upload">Attach a file<span class="required">*</span></label>
+            <input type="file" id="upload" name="upload" class="required file">
+          </li>
+          <li>
+            <fieldset>
+              <legend>Gender <span class="required">*</span></legend>
+              <ul>
+                <li>
+                  <input type="radio" id="gender-male" name="gender" value="m" class="radio required">
+                  <label for="gender-male">Male</label>
+                </li>
+                <li>
+                  <input type="radio" id="gender-female" name="gender" value="f" class="radio required">
+                  <label for="gender-female">Female</label>
+                </li>
+              </ul>
+            </fieldset>
+          </li>
+          <li>
+            <fieldset>
+              <legend>Contact preferences <span class="required">*</span></legend>
+              <ul>
+                <li>
+                  <input type="checkbox" id="spam_email" name="spam" value="email" class="required checkbox">
+                  <label for="spam_email">via E-Mail</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="spam_phone" name="spam" value="phone" class="checkbox">
+                  <label for="spam_phone">via Phone</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="spam_mail" name="spam" value="mail" class="checkbox">
+                  <label for="spam_mail">via Mail</label>
+                </li>
+              </ul>
+            </fieldset>
+          </li>  
+          <li>
+            <label for="body">Message <span class="required">*</span></label>
+            <textarea id="body" name="body" rows="12" cols="40" class="required"></textarea>
+          </li>
+          <li>
+            <input type="checkbox" id="agree" name="agree" class="required checkbox">
+            <label for="agree">I agree with your policy <span class="required">*</span></label>
+          </li>  
+          <li><input type="submit" value="Send Message" class="submit"></li>
+        </ul>
+      </form>
+      
+      <hr>
+  
+      <h2>Labels inline</h2>
+      <p>The class <code>.fields-inline</code> can be both applied to a whole list or a particulat list item.</p>
+      <form action="contact.php" method="post" id="contact-form2" class="form">
+        <p>Fields with <span class="required">*</span> are required</p>
+        <ul class="fields-inline">
+          <li>
+            <label for="name2">Name <span class="required">*</span></label>
+            <input type="text" id="name2" name="name2" class="text required">
+          </li>
+          <li>
+            <label for="company2">Company</label>
+            <input type="text" id="company2" name="company2" class="text">
+          </li>
+          <li>
+            <label for="email2">E-mail <span class="required">*</span></label>
+            <input type="text" id="email2" name="email2" class="text required email">
+          </li>
+          <li>
+            <label for="phone2">Telephone <span class="required">*</span></label>
+            <input type="text" id="phone2" name="phone2" class="text required number">
+          </li>
+          <li>
+            <label for="interested2">I'm interested in: <span class="required">*</span></label>
+            <select id="interested2" name="interested2" class="required">
+              <option value="" selected="selected" title="I'm interested in">Please select from below</option>
+              <option value="Professional Services Solutions">Professional Services Solutions</option>
+              <option value="Public Sector Soluctions">Public Sector Solutions</option>
+              <option value="Retail Solutions">Retail Solutions</option>
+              <option value="Bespoke Development">Bespoke Development</option>
+              <option value="Collaboration &amp; Web 2.0">Collaboration &amp; Web 2.0</option>
+              <option value="Hosting &amp; Application Management">Hosting &amp; Application Management</option>
+              <option value="Careers at WTG">Careers at WTG</option>
+              <option value="Press &amp; PR">Press &amp; PR</option>
+              <option value="Other">Other</option>
+            </select>
+          </li>
+          <li>
+            <label for="upload2">Attach a file<span class="required">*</span></label>
+            <input type="file" id="upload2" name="upload2" class="required file">
+          </li>
+          <li>
+            <fieldset>
+              <legend>Gender <span class="required">*</span></legend>
+              <ul class="list-inline">
+                <li>
+                  <input type="radio" id="gender-male2" name="gender2" value="m" class="radio required">
+                  <label for="gender-male2">Male</label>
+                </li>
+                <li>
+                  <input type="radio" id="gender-female2" name="gender2" value="f" class="radio required">
+                  <label for="gender-female2">Female</label>
+                </li>
+              </ul>
+            </fieldset>
+          </li>
+          <li>
+            <fieldset>
+              <legend>Contact preferences <span class="required">*</span></legend>
+              <ul class="list-inline">
+                <li>
+                  <input type="checkbox" id="spam_email2" name="spam2" value="email" class="required checkbox">
+                  <label for="spam_email2">via E-Mail</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="spam_phone2" name="spam2" value="phone" class="checkbox">
+                  <label for="spam_phone2">via Phone</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="spam_mail2" name="spam2" value="mail" class="checkbox">
+                  <label for="spam_mail2">via Mail</label>
+                </li>
+              </ul>
+            </fieldset>
+          </li>  
+          <li>
+            <label for="body2">Message <span class="required">*</span></label>
+            <textarea id="body2" name="body2" rows="12" cols="40" class="required"></textarea>
+          </li>
+          <li class="fields-block">
+            <input type="checkbox" id="agree2" name="agree2" class="required checkbox">
+            <label for="agree2">I agree with your policy <span class="required">*</span></label>
+          </li>  
+          <li><input type="submit" value="Send Message" class="submit"></li>
+        </ul>
+      </form>
+      
+      <hr>
+      
+      <h2>Items inline</h2>
+      <form action="contact.php" method="post" id="contact-form3" class="form">
+        <p>Fields with <span class="required">*</span> are required</p>
+        <ul>
+          <li class="grid_5 alpha">
+            <label for="name3">Name <span class="required">*</span></label>
+            <input type="text" id="name3" name="name3" class="required text">
+          </li>
+          <li class="grid_5">
+            <label for="company3">Company</label>
+            <input type="text" id="company3" name="company3" class="text">
+          </li>
+          <li class="grid_5 omega clearfix">
+            <label for="email3">E-mail <span class="required">*</span></label>
+            <input type="text" id="email3" name="email3" class="required email text">
+          </li>
+          <li class="grid_5 alpha"">
+            <label for="interested3">I'm interested in: <span class="required">*</span></label>
+            <select id="interested3" name="interested3" class="required">
+              <option value="" selected="selected" title="I'm interested in">Please select from below</option>
+              <option value="Professional Services Solutions">Professional Services Solutions</option>
+              <option value="Public Sector Soluctions">Public Sector Solutions</option>
+              <option value="Retail Solutions">Retail Solutions</option>
+              <option value="Bespoke Development">Bespoke Development</option>
+              <option value="Collaboration &amp; Web 2.0">Collaboration &amp; Web 2.0</option>
+              <option value="Hosting &amp; Application Management">Hosting &amp; Application Management</option>
+              <option value="Careers at WTG">Careers at WTG</option>
+              <option value="Press &amp; PR">Press &amp; PR</option>
+              <option value="Other">Other</option>
+            </select>
+          </li>
+          <li class="grid_5">
+            <fieldset>
+              <legend>Gender <span class="required">*</span></legend>
+              <ul>
+                <li>
+                  <input type="radio" id="gender-male3" name="gender3" value="m" class="required radio">
+                  <label for="gender-male3">Male</label>
+                </li>
+                <li>
+                  <input type="radio" id="gender-female3" name="gender3" value="f" class="radio">
+                  <label for="gender-female3">Female</label>
+                </li>
+              </ul>
+            </fieldset>
+          </li>
+          <li class="grid_5 omega clearfix">
+            <fieldset>
+              <legend>Contact preferences <span class="required">*</span></legend>
+              <ul>
+                <li>
+                  <input type="checkbox" id="spam_email3" name="spam3" value="email" class="required checkbox">
+                  <label for="spam_email3">via E-Mail</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="spam_phone3" name="spam3" value="phone" class="checkbox">
+                  <label for="spam_phone3">via Phone</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="spam_mail3" name="spam3" value="mail" class="checkbox">
+                  <label for="spam_mail3">via Mail</label>
+                </li>
+              </ul>
+            </fieldset>
+          </li> 
+          <li><input type="submit" value="Send Message" class="submit"></li>
+        </ul>
+      </form>             
+    </div>
+    
+    <div id="sidebar">
+
+    </div>
+  </div>
+  <!-- /container -->
+  
+  <ul class="visuallyhidden">
+    <li><a href="#content">Skip to content</a></li>
+    <li><a href="#navigation">Skip to site navigation</a></li>
+    <li><a href="#support-navigation">Skip to search</a></li>
+    <li><a href="#tools">Skip to accessibility options</a></li>
+  </ul>
+  
+  <script type="text/javascript" src="../../js/libs/jquery-1.5.1.min.js"></script>
+  <script type="text/javascript" src="../../js/libs/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="../../js/plugins.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      /*Initialise the validation function */
+      $('#contact-form, #contact-form2, #contact-form3').accValidate();
+    });
+  </script>
+
+</body>
+</html>
