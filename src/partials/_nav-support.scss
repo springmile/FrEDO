@@ -1,5 +1,3 @@
-@include nav-menu(auto);
-
 @mixin nav-support() {
   li {
     background: transparent url(../img/ui/bg-sep-li.gif) no-repeat 100% 50%;

@@ -557,66 +557,13 @@ fieldset {
  * Assigned to:  Diego Lago (dl)
  * Primary use:  Website
  */
-ul, ol {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  line-height: 1;
-  float: left;
-  width: 100%;
-}
-
-li {
-  width: auto;
-  float: left;
-}
-li:hover {
-  visibility: inherit;
-  /* fixes IE7 'sticky bug' */
-  outline: 0;
-}
-
-a {
-  display: block;
-  position: relative;
-}
-a:focus, a:hover, a:active {
-  outline: 0;
-}
-
-ul, ol {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  line-height: 1;
-  float: left;
-  width: 100%;
-}
-
-li {
-  width: auto;
-  float: left;
-}
-li:hover {
-  visibility: inherit;
-  /* fixes IE7 'sticky bug' */
-  outline: 0;
-}
-
-a {
-  display: block;
-  position: relative;
-}
-a:focus, a:hover, a:active {
-  outline: 0;
-}
-
 /* ie only */
 .ie7 .pagination ul,
 .ie6 .pagination ul {
   display: inline;
 }
 
+/* horizontal nav */
 #navigation ul, #navigation ol {
   margin: 0;
   padding: 0;
@@ -670,6 +617,7 @@ a:focus, a:hover, a:active {
   border-color: #4885ca;
 }
 
+/* vertical nav */
 #sub-navigation ul, #sub-navigation ol {
   margin: 0;
   padding: 0;
@@ -736,6 +684,31 @@ a:focus, a:hover, a:active {
   border-color: #4885ca;
 }
 
+/* breadcrumb nav */
+#breadcrumb ul, #breadcrumb ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1;
+  float: left;
+  width: 100%;
+}
+#breadcrumb li {
+  width: auto;
+  float: left;
+}
+#breadcrumb li:hover {
+  visibility: inherit;
+  /* fixes IE7 'sticky bug' */
+  outline: 0;
+}
+#breadcrumb a {
+  display: block;
+  position: relative;
+}
+#breadcrumb a:focus, #breadcrumb a:hover, #breadcrumb a:active {
+  outline: 0;
+}
 #breadcrumb li {
   background: transparent url(../img/ui/bg-sep-li.gif) no-repeat 100% 50%;
   margin-right: 10px;
@@ -758,6 +731,31 @@ a:focus, a:hover, a:active {
   padding-right: 18px;
 }
 
+/* support nav */
+.support-navigation ul, .support-navigation ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1;
+  float: left;
+  width: 100%;
+}
+.support-navigation li {
+  width: auto;
+  float: left;
+}
+.support-navigation li:hover {
+  visibility: inherit;
+  /* fixes IE7 'sticky bug' */
+  outline: 0;
+}
+.support-navigation a {
+  display: block;
+  position: relative;
+}
+.support-navigation a:focus, .support-navigation a:hover, .support-navigation a:active {
+  outline: 0;
+}
 .support-navigation li {
   background: transparent url(../img/ui/bg-sep-li.gif) no-repeat 100% 50%;
   margin-right: 10px;
@@ -776,6 +774,31 @@ a:focus, a:hover, a:active {
   text-decoration: underline;
 }
 
+/* pagination */
+.pagination ul, .pagination ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1;
+  float: left;
+  width: 100%;
+}
+.pagination li {
+  width: auto;
+  float: left;
+}
+.pagination li:hover {
+  visibility: inherit;
+  /* fixes IE7 'sticky bug' */
+  outline: 0;
+}
+.pagination a {
+  display: block;
+  position: relative;
+}
+.pagination a:focus, .pagination a:hover, .pagination a:active {
+  outline: 0;
+}
 .pagination div {
   width: 100%;
   text-align: center;

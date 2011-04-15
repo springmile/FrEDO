@@ -22,6 +22,7 @@
   
   <!-- CSS: implied media="all" -->
   <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../wtg/css/960.css">
 
   <!-- Uncomment if you are specifically targeting less enabled mobile browsers
   <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
@@ -48,9 +49,9 @@
   <!-- /header -->
   
   <!-- container -->
-  <div class="container">
+  <div class="container container_16">
     <div id="main">
-<h1>Form elements</h1>
+      <h1>Form elements</h1>
       <h2>Labels as blocks</h2>
       <form action="contact.php" method="post" id="contact-form" class="form">
         <p>Fields with <span class="required">*</span> are required</p>
@@ -234,15 +235,15 @@
             <label for="name3">Name <span class="required">*</span></label>
             <input type="text" id="name3" name="name3" class="required text">
           </li>
-          <li class="grid_5">
+          <li class="grid_5 omega clearfix">
             <label for="company3">Company</label>
             <input type="text" id="company3" name="company3" class="text">
           </li>
-          <li class="grid_5 omega clearfix">
+          <li class="grid_5 alpha">
             <label for="email3">E-mail <span class="required">*</span></label>
             <input type="text" id="email3" name="email3" class="required email text">
           </li>
-          <li class="grid_5 alpha"">
+          <li class="grid_5 omega clearfix">
             <label for="interested3">I'm interested in: <span class="required">*</span></label>
             <select id="interested3" name="interested3" class="required">
               <option value="" selected="selected" title="I'm interested in">Please select from below</option>
@@ -257,7 +258,7 @@
               <option value="Other">Other</option>
             </select>
           </li>
-          <li class="grid_5">
+          <li class="grid_5 alpha">
             <fieldset>
               <legend>Gender <span class="required">*</span></legend>
               <ul>

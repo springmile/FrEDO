@@ -11,7 +11,7 @@
 @import "../partials/nav-support";
 @import "../partials/nav-pagination";
 
-// horizontal nav
+/* horizontal nav */
 #navigation {
   @include nav-menu(auto);
   ul {
@@ -47,7 +47,7 @@
   }  
 }
 
-// vertical nav
+/* vertical nav */
 #sub-navigation {
   @include nav-menu();
   ul {
@@ -101,8 +101,9 @@
 }
 
 
-// breadcrumb nav
+/* breadcrumb nav */
 #breadcrumb {
+  @include nav-menu(auto);
   @include nav-support();
   
   li {
@@ -112,13 +113,15 @@
   
 }
 
-// support nav
+/* support nav */
 .support-navigation {
+  @include nav-menu(auto);
   @include nav-support();
 }
 
-// pagination
+/* pagination */
 .pagination {
+  @include nav-menu(auto);
   @include nav-pagination();
   
   a {
