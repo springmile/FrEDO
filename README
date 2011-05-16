@@ -1,3 +1,15 @@
-FrEDO - Front End Development Objects
+What is FrEDO?
+FrEDO stands for Front End Development Objects and it is a starting point for front end development work. 
 
-Diego Lago's work + lots of open source projects
+FrEDO has been created and is maintained by Diego Lago - diegolago.co.uk.
+
+What is included?
+FrEDO includes some of the most reliable Open Source front-end development projects and builds on top of them. This allows us to optimise our process and to establish best and consistent practices.
+
+	Design-Side Includes (DSI)
+	Sass/SCSS
+	HTML 5 Boilerplate
+	Build Script
+	960 Grid
+	jQuery
+	FrEDO Toolkit
