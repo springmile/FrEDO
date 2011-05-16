@@ -8,7 +8,7 @@
 @import "common/typography";
 @import "common/forms";
 
-// grid layout
+// page structure (layout/skeleton)
 @import "partials/960-grid";
 
 $ninesixty-columns: 16;
@@ -35,11 +35,11 @@ $ninesixty-columns: 16;
   }
 }
 
-// site specific styles
+// page components (site specific styles)
 //@import "site/site";
 @import "site/navs";
 
-// html 5 boilerplate bottom section
+// html 5 boilerplate bottom section (overrides)
 @import "common/helpers";
 @import "common/media";
 @import "common/print";
